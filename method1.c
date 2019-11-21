@@ -11,16 +11,9 @@ struct ListNode* swapPairs(struct ListNode* head){
     if(head==NULL) return(NULL);
     
     if(head->next){
-        struct ListNode* ptrA0 = malloc(sizeof(struct ListNode));
-        struct ListNode* ptrA1 = malloc(sizeof(struct ListNode));
-        struct ListNode* ptrA2 = malloc(sizeof(struct ListNode));
-
-
-        ptrA0=head;
-        ptrA1=head->next;
-        ptrA2=head->next->next;
-
-     
+        struct ListNode* ptrA0 = head;
+        struct ListNode* ptrA1 = head->next;
+        struct ListNode* ptrA2 = head->next->next;   
        
         head            =ptrA1; 
         head->next      =ptrA0;   
